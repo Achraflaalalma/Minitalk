@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 11:28:11 by alaalalm          #+#    #+#             */
-/*   Updated: 2023/12/22 09:18:59 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:40:10 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	main(void)
 	sa.sa_sigaction = &handle_sigl;
 	sa.sa_flags = SA_SIGINFO;
 	startup();
-	ft_printf("%sServer is listnening at PID: %s%d\n", CYAN, WHITE, getpid());
+	ft_printf("%s Server is listnening at PID: %s%d\n", CYAN, WHITE, getpid());
 	if (sigaction(SIGUSR1, &sa, NULL) == -1)
 		exit(EXIT_FAILURE);
 	if (sigaction(SIGUSR2, &sa, NULL) == -1)
